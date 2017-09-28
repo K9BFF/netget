@@ -13,7 +13,7 @@ import os  # for renaming the command prompt in windows
 from urllib.parse import urlparse  # parsing urls
 
 if os.name == 'nt':
-	os.system("title NetGet")
+	os.system("title NetGet") # Renaming CMD window (windows only)
 
 # get proxies
 print("You are connected to the following proxies:", urllib.request.getproxies())
@@ -21,7 +21,7 @@ print("You are connected to the following proxies:", urllib.request.getproxies()
 def getinfo():
     while 1 > 0:  # loop
         # url input
-        print("Please input a URL. (ex. \"google.com.\" Please do not include \"http(s)://\" in the URL.)")
+        print("Please input a URL. (ex. \"google.com.\" Do not include \"http(s)://\" in the URL.)")
         a = input(">> ")
 
         # http/https selection
@@ -46,7 +46,7 @@ def getinfo():
             errcode = str(e.code)
             print("If you would like to know what this code means, click here: https://httpstatuses.com/"+errcode)
 
-        except urllib.error.URLError as e:  # dns/connection refused error
+        except urllib.error.URLError as e:  # dns/connection refused error (FUCKED UP FUCKED UP FUCKED UP FUCKED UP YOU DONE FUCKED UP -XXXTentacion, Take a step back)
             print('Error: Connection refused. Make sure you didn\'t mistype the URL, and that you are not connecting to'
                   ' localhost.')
 
